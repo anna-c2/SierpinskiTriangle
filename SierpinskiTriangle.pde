@@ -1,3 +1,4 @@
+int length = 400;
 public void setup()
 {
 	size(800,800);
@@ -5,18 +6,24 @@ public void setup()
 public void draw()
 {
 	background(0);
-	sierpinski(0,800,900);
+	sierpinski(0,800,length);
 }
-public void mouseDragged()//optional
+public void keyPressed()//optional
 {
-	sierpinski(400,400,mouseY);
+	if(key == CODED)
+	{
+		if(keyCode == UP)
+			length+=3;
+		if(keyCode == DOWN)
+			length-=3;
+	}
 
 }
 public void sierpinski(int x, int y, int len) 
 {
 	fill(255);
 
-	if(len <= 10)
+	if(len <= 50)
 	{
 		triangle(x,y,x+len,y,x+len/2,y-len);
 
