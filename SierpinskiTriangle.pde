@@ -3,11 +3,11 @@ public void setup()
   size(700,700);
   background(0);
 }
-int len = 100;
+
 public void draw()
 {
-  //int len = 0;
-  sierpinski(0,700,len);
+
+  sierpinski(0,700,100);
  
 }
 public void mouseClicked()//optional
