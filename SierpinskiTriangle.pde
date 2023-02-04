@@ -6,8 +6,8 @@ public void setup()
 
 public void draw()
 {
-
-  sierpinski(0,700,100);
+  int len = 100;
+  sierpinski(0,700,len);
  
 }
 public void mouseClicked()//optional
