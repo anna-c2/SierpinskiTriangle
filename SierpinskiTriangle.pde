@@ -1,19 +1,18 @@
+ int len = 100;
+
 public void setup()
 {
   size(700,700);
   background(0);
-  int len = 100;
-
 }
 
 public void draw()
 {
+  background(0);
   sierpinski(0,700,len);
- 
 }
 public void mousePressed()//optional
 {
-  clear();
   fill((int)(Math.random()*150), 175, (int)(Math.random()*250));
   if(len < 701){
     len+=100;
