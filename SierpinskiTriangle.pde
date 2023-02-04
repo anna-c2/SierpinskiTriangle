@@ -10,7 +10,7 @@ public void draw()
   sierpinski(0,700,len);
  
 }
-public void mouseClicked()//optional
+public void mousePressed()//optional
 {
   clear();
   fill((int)(Math.random()*150), 175, (int)(Math.random()*250));
