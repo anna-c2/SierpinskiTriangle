@@ -2,8 +2,9 @@ public void setup()
 {
   size(700,700);
   background(0);
-}
   int len = 100;
+
+}
 
 public void draw()
 {
