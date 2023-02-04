@@ -1,5 +1,5 @@
  int len = 100;
-
+boolean grow = true;
 public void setup()
 {
   size(700,700);
@@ -14,11 +14,21 @@ public void draw()
 public void mousePressed()//optional
 {
   fill((int)(Math.random()*150), 175, (int)(Math.random()*250));
-  if(len < 701){
-    len+=100;
+  if(grow == true){
+   if(len == 700){
+    grow = false;
+   }
+   if(len < 701){
+     len+=100;
+   }
   }
-  if(len > 700){
-    len = 100;
+  else{
+   if(len == 0){
+    grow = true;
+   }
+   if(len > 700 && len > 0){
+     len -= 100;
+   }
   }
 }
 public void sierpinski(int x, int y, int len)
